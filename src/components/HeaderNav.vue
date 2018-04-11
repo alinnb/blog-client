@@ -1,7 +1,7 @@
 <template>
   <header class="nav-container">
     <nav class="site-nav">
-      <router-link class="nav-title" :to="{path:'articles', query:{page:0}}">
+      <router-link class="nav-title" :to="{path:'/articles', query:{page:0}}">
         <img class="logo" src="../assets/logo.png" alt="...">
         <span class="title">学海无涯</span>
       </router-link>

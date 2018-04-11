@@ -4,13 +4,13 @@
       <article class="artcile" v-for="{id, title, publishTime, content} in articles" :key="id">
         <header>
           <h2>
-            <router-link class="article-title" :to="'/api/articles/' + id">{{title}}</router-link>
+            <router-link class="article-title" :to="'/articles/' + id">{{title}}</router-link>
           </h2>
           <div class="article-time">{{publishTime}}</div>
         </header>
         <p v-html="md(content)"></p>
         <footer>
-          <router-link class="article-footer" :to="'/api/articles/' + id">... continue reading</router-link>
+          <router-link class="article-footer" :to="'/articles/' + id">... continue reading</router-link>
         </footer>
       </article>
     </div>
@@ -21,6 +21,8 @@
 import axios from 'axios'
 import moment from 'moment'
 import markdown from 'markdown'
+
+moment.locale('zh-CN')
 
 export default {
   data: function () {
@@ -70,7 +72,6 @@ export default {
 }
 
 .content-container {
-  // @include flex($flow: column wrap);
   text-align: left;
   margin: auto;
   padding: 1em;
@@ -80,7 +81,6 @@ export default {
 
   .artcile {
     padding-bottom: 0.5em;
-    // border-bottom: solid 1px rgba($color: #000000, $alpha: 0.1)
   }
 
   .article-title {
@@ -88,12 +88,12 @@ export default {
     font-size: 1.2rem;
 
     &:hover {
-      border-bottom: solid 2px #42b997;
+      border-bottom: solid 2px #42b983;
     }
   }
 
   .article-footer {
-    color: #42b997;
+    color: #42b983;
     font-size: 0.8rem;
   }
 
