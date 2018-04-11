@@ -184,6 +184,7 @@ export default {
 @media screen and (max-width: 480px) {
   .site-nav {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
     .nav-menu-list {
       display: none;
     }
