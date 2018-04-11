@@ -123,7 +123,7 @@ export default {
     width: 1.5em;
     height: 1.5em;
     border: solid 1px #333;
-    visibility: visible;
+    visibility: hidden;
   }
 }
 
